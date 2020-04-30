@@ -11,6 +11,11 @@ spring:
     port: 5672
     username: guest
     password: guest
+  cloud:
+    bus:
+      enable: true
+      trace:
+        enable: true
 
 eureka:
   client:

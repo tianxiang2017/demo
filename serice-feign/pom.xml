@@ -20,6 +20,8 @@
     </properties>
 
     <dependencies>
+
+        <!-- feign(ribbon hystrix 基于接口和注解)-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>

@@ -7,6 +7,7 @@ spring:
     config:
       label: master
       profile: dev
+      # 使用服务发现，支持集群
       discovery:
         enabled: true
         serviceId: config-server

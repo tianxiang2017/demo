@@ -11,7 +11,8 @@ public class HelloService {
     RestTemplate restTemplate;
 
     public String hiService(String name) {
-        return restTemplate.getForObject("http://service-hi/hi?name=" + name, String.class); // 负载均衡策略默认是轮训
+        // 获取服务。restTemplate已开启LoadBalanced功能。// 负载均衡策略默认是轮训
+        return restTemplate.getForObject("http://service-hi/hi?name=" + name, String.class);
     }
 
 }

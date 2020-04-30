@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 @EnableDiscoveryClient
-@RefreshScope //
+@RefreshScope // 要加RefreshScop，不加不会刷新
 public class ConfigClientApplication {
 
     public static void main(String[] args) {

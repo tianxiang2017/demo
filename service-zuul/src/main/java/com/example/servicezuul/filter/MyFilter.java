@@ -28,6 +28,7 @@ public class MyFilter extends ZuulFilter {
         return true;
     }
 
+    // 过滤器的具体逻辑。可用很复杂，包括查sql，nosql去判断该请求到底有没有权限访问。
     @Override
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();

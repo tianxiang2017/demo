@@ -11,7 +11,7 @@ public class HelloService {
     @Autowired
     RestTemplate restTemplate;
 
-    @HystrixCommand(fallbackMethod = "hiError")
+    @HystrixCommand(fallbackMethod = "hiError") // 该注解对该方法创建了熔断器的功能。当服务不可以时，会快速失败
     public String hiService(String name) {
         return restTemplate.getForObject("http://service-hi/hi?name=" + name, String.class); // 负载均衡策略默认是轮训
     }

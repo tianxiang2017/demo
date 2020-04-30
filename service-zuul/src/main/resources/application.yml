@@ -12,6 +12,7 @@ eureka:
       defaultZone: http://peer1:8761/eureka/
 
 
+# 配置zuul的路由
 zuul:
   routes:
     api-a:
@@ -20,3 +21,9 @@ zuul:
     api-b:
       path: /api-b/**
       serviceId: service-feign
+    api-c:
+      path: /api-c/**
+      serviceId: service-hystrix
+    api-d:
+      path: /api-d/**
+      serviceId: service-hystrix2

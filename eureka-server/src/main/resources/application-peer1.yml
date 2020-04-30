@@ -4,6 +4,7 @@ server:
 eureka:
   instance:
     hostname: peer1
+  # Eureka Server也注册为一个客户端，实现集群
   client:
     serviceUrl:
       defaultZone: http://peer2:8762/eureka/
