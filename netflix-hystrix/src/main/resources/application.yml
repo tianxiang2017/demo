@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/
+server:
+  port: 8766
+spring:
+  application:
+    name: service-hystrix
+
+#暴露全部的监控信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

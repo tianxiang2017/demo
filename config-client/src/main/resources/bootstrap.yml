@@ -1,0 +1,12 @@
+
+# config 要加到bootstrap才会生效
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        serviceId: config-server

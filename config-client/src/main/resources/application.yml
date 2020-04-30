@@ -1,0 +1,28 @@
+
+server:
+  port: 8881
+
+spring:
+  application:
+    name: config-client
+    # Make sure the broker (RabbitMQ or Kafka) is available and configured.
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+      #expose the /actuator/bus-refresh endpoint
+       include: bus-refresh
+
+
